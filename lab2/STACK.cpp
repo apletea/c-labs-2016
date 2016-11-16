@@ -11,7 +11,7 @@ STACK::STACK(int maxN){
 		s = new int[maxN];
 	}
 	catch(exception e){
-		cout << "Íå äîñòàòî÷íî ïàìÿòè" << endl;
+		cout << "ÃÃ¥ Ã¤Ã®Ã±Ã²Ã Ã²Ã®Ã·Ã­Ã® Ã¯Ã Ã¬Ã¿Ã²Ã¨" << endl;
 	}
 	N = 0;
 }
@@ -39,7 +39,7 @@ void STACK::push(int item) {
 
 int STACK::pop() {
 	if (N == 0) {
-		cout << "ââåäèòå ýëåìåíòîâ" << endl;
+		cout << "Ã¢Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã®Ã¢" << endl;
 		return 0;
 	}
 	else {
@@ -47,7 +47,7 @@ int STACK::pop() {
 	}
 }
 
-void STACK::delObject() {
+void STACK::delOdd() {
 	int cur = 0;
 	int tmp = N % 2;
 	for (int i = 0; i < N / 2 ;i++, cur++) {
