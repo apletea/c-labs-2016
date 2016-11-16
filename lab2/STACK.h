@@ -13,7 +13,7 @@ public:
 	void push(int item);
 	void show();
 	void delElem(int n);
-	void delObject();
+	void delOdd();
 	friend ostream& operator << (ostream& out,  STACK& T);
 	friend istream& operator >> (istream& in,   STACK& T);
 
