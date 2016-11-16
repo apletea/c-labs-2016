@@ -8,7 +8,7 @@ using namespace std;
 void pushToStack(STACK & a);
 void popFromStack(STACK & a);
 void showStack(STACK & a);
-void deletenumfromStack(STACK & a);
+void deleteOddsfromStack(STACK & a);
 void PrintMenu();
 void menu();
 int chooseMenu(STACK & a);
@@ -33,11 +33,11 @@ void menu() {
 }
 
 void PrintMenu() {
-	cout << "Ââåäèòå 1, ÷òîáû  âûïîëíèòü ôóíêöèþ push" << endl;
-	cout << "Ââåäèòå 2, ÷òîáû  âûïîëíèòü ôóíêöèþ pop" << endl;
-	cout << "Ââåäèòå 3, ÷òîáû  ïðîñìîòðåòü âåñü ñòåê"<< endl;
-	cout << "Ââåäèòå 4, ÷òîáû  óäàëèòü íå÷¸òíûå ýëåìåíòû ñòýêà" << endl;
-	cout << "Ââåäèòå 5, ÷òîáû âûéòè èç ïðîãðàììû" << endl;
+	cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ 1, Ã·Ã²Ã®Ã¡Ã»  Ã¢Ã»Ã¯Ã®Ã«Ã­Ã¨Ã²Ã¼ Ã´Ã³Ã­ÃªÃ¶Ã¨Ã¾ push" << endl;
+	cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ 2, Ã·Ã²Ã®Ã¡Ã»  Ã¢Ã»Ã¯Ã®Ã«Ã­Ã¨Ã²Ã¼ Ã´Ã³Ã­ÃªÃ¶Ã¨Ã¾ pop" << endl;
+	cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ 3, Ã·Ã²Ã®Ã¡Ã»  Ã¯Ã°Ã®Ã±Ã¬Ã®Ã²Ã°Ã¥Ã²Ã¼ Ã¢Ã¥Ã±Ã¼ Ã±Ã²Ã¥Ãª"<< endl;
+	cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ 4, Ã·Ã²Ã®Ã¡Ã»  Ã³Ã¤Ã Ã«Ã¨Ã²Ã¼ Ã­Ã¥Ã·Â¸Ã²Ã­Ã»Ã¥ Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã» Ã±Ã²Ã½ÃªÃ " << endl;
+	cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ 5, Ã·Ã²Ã®Ã¡Ã» Ã¢Ã»Ã©Ã²Ã¨ Ã¨Ã§ Ã¯Ã°Ã®Ã£Ã°Ã Ã¬Ã¬Ã»" << endl;
 }
 
 int chooseMenu(STACK & a) {
@@ -47,15 +47,15 @@ int chooseMenu(STACK & a) {
 	case 1: {pushToStack(a);  break;}
 	case 2: {popFromStack(a);  break;}
 	case 3: {showStack(a);  break;}
-	case 4: {deletenumfromStack(a);  break;}
+	case 4: {deleteOddsfromStack(a);  break;}
 	case 5: {return 5;  break;}
-	default: cout << "Ââåäèòå ÷èñëî çàíîâî" << endl;break;
+	default: cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã·Ã¨Ã±Ã«Ã® Ã§Ã Ã­Ã®Ã¢Ã®" << endl;break;
 	}
 	return 0;
 }
 
 void pushToStack(STACK & a) {
-		cout << "Ââåäèòå ÷èñëî êîòîðîå õîòèòå äîáàâèòü â ñòýê" << endl;
+		cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã·Ã¨Ã±Ã«Ã® ÃªÃ®Ã²Ã®Ã°Ã®Ã¥ ÃµÃ®Ã²Ã¨Ã²Ã¥ Ã¤Ã®Ã¡Ã Ã¢Ã¨Ã²Ã¼ Ã¢ Ã±Ã²Ã½Ãª" << endl;
 		int num;
 		cin >> num;
 		a.push(num);
@@ -70,7 +70,7 @@ void showStack(STACK & a) {
 	a.show();
 }
 
-void deletenumfromStack(STACK & a) {
-	a.delObject();
+void deleteOddsfromStack(STACK & a) {
+	a.delOdd();
 }
 
